@@ -1,0 +1,31 @@
+{
+    "name": "hngtask1",
+    "version": "1.0.0",
+    "description": "hng internship task1",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemmon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kamzzy/HngTask1.git"
+    },
+    "author": "joseph",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kamzzy/HngTask1/issues"
+    },
+    "homepage": "https://github.com/kamzzy/HngTask1#readme",
+    "dependencies": {
+        "bcrypt": "^3.0.6",
+        "body-parser": "^1.19.0",
+        "connect-flash": "^0.1.1",
+        "connect-mongo": "^3.0.0",
+        "edge.js": "^1.1.4",
+        "express": "^4.17.1",
+        "express-edge": "^2.0.0",
+        "express-session": "^1.16.2",
+        "mongoose": "^5.7.1"
+    }
+}
