@@ -1,7 +1,7 @@
 {
     "name": "hngtask1",
     "version": "1.0.0",
-     "engines": {
+    "engines": {
         "node": "7.10.0"
     },
     "description": "hng internship task1",
@@ -21,7 +21,7 @@
     },
     "homepage": "https://github.com/kamzzy/HngTask1#readme",
     "dependencies": {
-        "bcrypt": "^3.0.6",
+        "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.0",
         "connect-flash": "^0.1.1",
         "connect-mongo": "^3.0.0",

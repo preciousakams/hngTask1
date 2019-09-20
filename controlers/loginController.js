@@ -1,5 +1,5 @@
 const User = require('../database/models/user');
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 
 module.exports = (req, res) => {
 
