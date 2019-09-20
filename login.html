@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Login page</title>
+      <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+    <div id="login-box">
+      <div class="left">
+        <h1>Sign in</h1>
+        <form action="users/login" method="POST">
+          <input type="text" name="email" placeholder="E-mail or Username">
+          <input type="password" name="password" placeholder="Password">
+          <input type="submit" name="Login" value="Login">
+        </form>
+      </div>
+      <div class="right">
+        <span class="signup">Sign in with<br />social network</span>
+        <button class="signin email">Log In With Email</button>
+        <button class="signin facebook">Log In With Facebook</button>
+        <button class="signin twitter">Log In With Twitter</button>
+        <button class="signin google">Log In With Google+</button>
+      </div>
+      <div class="or">OR</div>
+    </div>
+  </body>
+</html>
