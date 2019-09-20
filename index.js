@@ -14,9 +14,9 @@ const loginpageController = require('./controlers/login')
 const userPageController = require('./controlers/user')
 const dotenv = require('dotenv').config()
 const port = process.env.PORT || 60
+const connectString = 'mongodb+srv://pryme:<nagato1>@cluster0-i0ivc.mongodb.net/test?retryWrites=true&w=majority'
 
-
-//mongoose.connect('mongodb://localhost:27017/kamzy', { useNewUrlParser: true })
+mongoose.connect(connectString, { useNewUrlParser: true })
 //mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global');
 mongodb+srv://pryme:<nagato1>@cluster0-i0ivc.mongodb.net/test?retryWrites=true&w=majority
 const mongoStore = connectMongo(expressSession)
