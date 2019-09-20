@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+body {
+    margin: 0;
+    padding: 0;
+    background: #DDD;
+    font-size: 16px;
+    color: #222;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+#success-box {
+    position: relative;
+    margin: 5% auto;
+    width: 400px;
+    height: 200px;
+    background: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: green;
+}
+p.congrats{
+    position: relative;
+    font-size: 25px;
+    top: 40px;
+    font-weight: 400px;
+}
+p.name{
+    font-size: 32px;
+    font-weight: 500px;
+    margin-top: 50px;
+}
+i#success{
+    position: relative;
+    font-size: 50px;
+    margin-right: 10px;
+    top: 5px;
+}
+p.message{
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+    bottom: 45px;
+}
