@@ -17,7 +17,8 @@ const port = process.env.PORT || 60
 
 
 //mongoose.connect('mongodb://localhost:27017/kamzy', { useNewUrlParser: true })
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global');
+//mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global');
+mongodb+srv://pryme:<nagato1>@cluster0-i0ivc.mongodb.net/test?retryWrites=true&w=majority
 const mongoStore = connectMongo(expressSession)
 const app = express();
 
