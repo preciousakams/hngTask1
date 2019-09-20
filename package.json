@@ -1,11 +1,14 @@
 {
     "name": "hngtask1",
     "version": "1.0.0",
+    "engines": {
+        "node": "7.10.0"
+    },
     "description": "hng internship task1",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemmon index.js"
+        "start": "node index.js"
     },
     "repository": {
         "type": "git",
