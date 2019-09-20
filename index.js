@@ -51,6 +51,4 @@ app.post('/users/register', storeUserController)
 app.post('/users/login', loginController)
 
 
-
-
 app.listen(port);
