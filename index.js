@@ -16,7 +16,7 @@ const dotenv = require('dotenv').config()
 const port = process.env.PORT || 60
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://prym:nagato01@cluster0-tvoih.mongodb.net/global?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
+const client = new MongoClient(uri, { useNewUrlParser: true }, { useUnifiedTopology: true });
 client.connect(err => {
         const collection = client.db("global").collection("user");
         // perform actions on the collection object
