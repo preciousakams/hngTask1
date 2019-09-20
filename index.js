@@ -14,7 +14,7 @@ const loginpageController = require('./controlers/login')
 const userPageController = require('./controlers/user')
 const dotenv = require('dotenv').config()
 const port = process.env.PORT || 60
-const uri = "mongodb+srv://prym:<password>@cluster0-tvoih.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://prym:nagato01@cluster0-tvoih.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 mongoose.connect(connectString, { useNewUrlParser: true })
 client.connect(err => {
