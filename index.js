@@ -14,16 +14,16 @@ const loginpageController = require('./controlers/login')
 const userPageController = require('./controlers/user')
 const dotenv = require('dotenv').config()
 const port = process.env.PORT || 60
-const uri = "mongodb+srv://prym:nagato01@cluster0-tvoih.mongodb.net/test?retryWrites=true&w=majority";
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://prym:nagato01@cluster0-tvoih.mongodb.net/global?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
-mongoose.connect(connectString, { useNewUrlParser: true })
 client.connect(err => {
-  const collection = client.db("global").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
-//mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global');
-//mongodb+srv://pryme:<nagato1>@cluster0-i0ivc.mongodb.net/test?retryWrites=true&w=majority
+        const collection = client.db("global").collection("user");
+        // perform actions on the collection object
+        client.close();
+    })
+    //mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global');
+    //mongodb+srv://pryme:<nagato1>@cluster0-i0ivc.mongodb.net/test?retryWrites=true&w=majority
 const mongoStore = connectMongo(expressSession)
 const app = express();
 
