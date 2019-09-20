@@ -10,9 +10,14 @@ const regpageController = require('./controlers/regpageController.js')
 const bodyParser = require('body-parser')
 const storeUserController = require('./controlers/storeUser')
 const loginController = require('./controlers/loginController')
+const loginpageController = require('./controlers/login')
+const userPageController = require('./controlers/user')
+const dotenv = require('dotenv').config()
+const port = process.env.PORT || 60
 
 
-mongoose.connect('mongodb://localhost:27017/kamzy', { useNewUrlParser: true })
+//mongoose.connect('mongodb://localhost:27017/kamzy', { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global');
 const mongoStore = connectMongo(expressSession)
 const app = express();
 
@@ -39,11 +44,13 @@ app.set('views', `${__dirname}/views`)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get('/', regpageController);
+app.get('/', regpageController)
+app.get('/login', loginpageController)
+app.get('/user', userPageController)
 app.post('/users/register', storeUserController)
 app.post('/users/login', loginController)
 
 
 
 
-app.listen(60);
+app.listen(port);

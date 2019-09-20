@@ -5,13 +5,17 @@ module.exports = (req, res) => {
 
     const { email, password } = req.body
 
+    console.log(req.body)
+
     //find the user
     User.findOne({ email }, (error, user) => {
         if (user) {
             bcrypt.compare(password, user.password, (error, same) => {
                 if (same) {
-                    req.session.userId = user._id
-                    req.session.userName = user.userName
+                    req.session
+                    req.session.userid = user._id
+                    req.session.username = user.username
+
                     res.redirect('/user')
                 } else {
 
