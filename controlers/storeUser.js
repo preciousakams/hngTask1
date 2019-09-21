@@ -9,10 +9,16 @@ module.exports = (req, res) => {
     const { username, email, password, password2 } = req.body
 
 
+
+    if (!usernamename || !email || !password || !password2) {
+        errors.push({ msg: "Please fill in all fields" });
+        const registrationErrors = "fields cannot be empty"
+        req.flash('registrationErrors', registrationErrors)
+    }
     User.findOne({ email: email }).then(
         user => {
             if (user) {
-                const registrationErrors = " user alreay exists"
+                registrationErrors = " user alreay exists"
                 req.flash('registrationErrors', registrationErrors)
                 res.redirect('/')
             } else {
