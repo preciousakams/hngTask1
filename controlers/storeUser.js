@@ -10,7 +10,7 @@ module.exports = (req, res) => {
 
 
 
-    if (!usernamename || !email || !password || !password2) {
+    if (usernamename == " " || email == " " || password == " " || password2 == " ") {
         errors.push({ msg: "Please fill in all fields" });
         const registrationErrors = "fields cannot be empty"
         req.flash('registrationErrors', registrationErrors)
