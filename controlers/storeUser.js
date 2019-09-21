@@ -10,11 +10,7 @@ module.exports = (req, res) => {
 
 
 
-    if (usernamename == " " || email == " " || password == " " || password2 == " ") {
-        errors.push({ msg: "Please fill in all fields" });
-        const registrationErrors = "fields cannot be empty"
-        req.flash('registrationErrors', registrationErrors)
-    }
+
     User.findOne({ email: email }).then(
         user => {
             if (user) {
@@ -24,13 +20,19 @@ module.exports = (req, res) => {
             } else {
                 if (password != password2) {
                     const registrationErrors = " password do not match"
-                    console.log(registrationErrors)
+
                     req.flash('registrationErrors', registrationErrors)
                     return res.redirect('/')
                 }
+                if (!username || !email || !password || !password2) {
+                    const registrationErrors = "Fields cannot be empty"
+                    req.flash('registrationErrors', registrationErrors)
+                    return res.redirect('/')
+
+                }
                 if (password.length < 6 || password2.length < 6) {
                     const registrationErrors = "password must be more than 6 characters"
-                    console.log(registrationErrors)
+
                     req.flash('registrationErrors', registrationErrors)
                     return res.redirect('/')
                 } else User.create(req.body, (error, user) => {
