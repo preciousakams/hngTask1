@@ -30,6 +30,6 @@
         "express": "^4.17.1",
         "express-edge": "^2.0.0",
         "express-session": "^1.16.2",
-        "mongoose": "^5.7.1"
+        "mongoose": "^5.7.5"
     }
 }
